@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now - Your Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      <link rel="stylesheet" href="res.css">
+    <style>
+        body {
+            font-family: 'Chakra Petch', 'Varela Round', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #333;
+            height: 200vh;
+        }
+
+        #header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #e2e8ec;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.329);
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar ul li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size:x-large;
+    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    color: rgb(63, 63, 63);
+    transition: 0.4s;
+}
+.navbar ul li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: rgb(35, 130, 97);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+    transition: 0.5s;
+}
+.navbar ul li a:hover,
+.navbar ul li a.active{
+    color: rgb(35, 130, 97);
+}
+.navbar ul li a.active::after,
+.navbar ul li a:hover::after{
+    content: "";
+    width: 60%;
+    height: 2px;
+    background-color: rgb(35, 130, 97);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+.logo{
+    width: 150px;
+    transition: 0.5s;
+}
+.logo:hover{
+    content: url('imgs/hlogo.png');
+    scale: 1.05;
+}
+
+        #hero {
+            background: #eee;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #order-content {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #order-content img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        #order-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        #order-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        #order-form input,
+        #order-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        #order-form button {
+            background-color: rgb(35, 130, 97);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #order-form button:hover {
+            background-color: rgb(28, 100, 75);
+        }
+        
+        .order-summary {
+            max-width: 600px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .summary-item {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="header">
+        <a href="index.html"><img class="logo" src="imgs/logo.png" alt="Logo" width="20vw"></a>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="login.html"><i class="fa-solid fa-user"></i></a></li>
+              <li><a class="dropdown-item" href="index.html">Home</a></li>
+              <li><a class="dropdown-item" href="shop.html">Shop</a></li>
+              <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+              <li><a class="dropdown-item" href="about.html">About</a></li>
+              <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+              <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+        <div class="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a class="active" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+          </ul>
+        </div>
+      </section>
+
+    <section id="hero">
+        <h1>Order Now</h1>
+    </section>
+
+    <div id="order-content">
+        <img src="https://source.unsplash.com/800x400/?product" alt="Product Image">
+        <p>Choose your product options and place your order now!</p>
+
+        <form id="order-form">
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="product">Select Product:</label>
+            <select id="product" name="product" required>
+                <option value="product1">Product 1</option>
+                <option value="product2">Product 2</option>
+                <option value="product3">Product 3</option>
+                <option value="product3">Product 4</option>
+                <option value="product3">Product 5</option>
+                <option value="product3">Product 6</option>
+                <option value="product3">Product 7</option>
+                <option value="product3">Product 8</option>
+                <option value="product3">Product 9</option>
+                <option value="product3">Product 10</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <button type="button" onclick="placeOrder()">Place Order</button>
+        </form>
+
+        <div class="order-summary" id="orderSummary">
+            <!-- Order summary will be displayed here -->
+        </div>
+    </div>
+
+    <footer class="flex-all-center">
+        <p>&copy;CopyRight FlipKart.com</p>
+      </footer>
+</body>
+<script>
+    function placeOrder() {
+        const customerName = document.getElementById('customerName').value;
+        const email = document.getElementById('email').value;
+        const product = document.getElementById('product').value;
+        const quantity = document.getElementById('quantity').value;
+
+        // Here, you can send this data to your backend for processing
+        // For this example, let's just display the order summary on the page
+
+        const orderSummaryContainer = document.getElementById('orderSummary');
+        orderSummaryContainer.innerHTML = `
+            <h2>Order Summary</h2>
+            <div class="summary-item"><strong>Customer Name:</strong> ${customerName}</div>
+            <div class="summary-item"><strong>Email:</strong> ${email}</div>
+            <div class="summary-item"><strong>Product:</strong> ${product}</div>
+            <div class="summary-item"><strong>Quantity:</strong> ${quantity}</div>
+            <div class="summary-item"><strong>Order Status:</strong> Placed</div>
+        `;
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</html>

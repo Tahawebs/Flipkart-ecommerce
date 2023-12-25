@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            overflow: hidden;
+            background: url('imgs/login\ back.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        form {
+            margin: auto;
+            margin-top: 10vh;
+        }
+
+        form {
+            background-color: rgba(26, 255, 0, 0.471);
+            width: 25vw;
+            height: 60vh;
+            /* Increased height to accommodate social buttons */
+            border-radius: 60px/60px 0;
+            padding: 20px;
+            box-shadow: 0px 0 20px 0 rgb(0, 0, 0);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            animation-delay: 0.1s;
+        }
+
+        form:hover {
+            transform: scale(1.05);
+            background-color: rgba(23, 232, 0, 0.683);
+        }
+
+        .heading {
+            text-align: center;
+            color: rgb(48, 48, 48);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .butt {
+            text-align: center;
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: white;
+            color: black;
+            border: 2px solid rgb(6, 94, 100);
+            border-radius: 5vw 0 5vw 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgb(6, 94, 100);
+            color: aliceblue;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: calc(100% - 24px);
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 4px solid rgb(52, 107, 111);
+            transition: border-bottom 0.3s ease;
+            border-radius: 2vw 0 2vw 0;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus {
+            border-bottom: 2px solid rgb(6, 94, 100);
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(39, 35, 35, 0.8);
+            padding: 10px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(39, 35, 35, 0.8);
+            padding: 10px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome p {
+            margin: 0;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+
+<body>
+    <form>
+            <h1 class="heading"><i class="fa-solid fa-user"></i></h1>
+
+            <input type="text" id="username" placeholder="User Name." name="username" required><br><br>
+
+            <input type="email" id="email" placeholder="Email." name="email" required><br><br>
+
+            <input type="password" id="password" placeholder="Password" name="password" required><br><br>
+
+                <button type="submit">Sign Up</button>
+
+            </form>
+            <p style="text-align: center;">Don't Have an Account? <a style="text-decoration: none;"
+                    href="https://accounts.google.com/signup/v2/createaccount?theme=glif&flowName=GlifWebSignIn&flowEntry=SignUp">Sign
+                    Up! Here</a></p>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzTx3mUEVhGYgFY2N3V__nNvP7gnyLVh0BKtJ2Miu1E9ami04UiA_Tcp8pH3k0_t1Ql/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <div class="welcome">
+        <p>Welcome to the Login Page!</p>
+    </div>
+    <div class="footer">
+        &copy; 2023 Your Company Name
+    </div>
+</body>
+
+</html>

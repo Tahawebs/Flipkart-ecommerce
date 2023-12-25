@@ -1,0 +1,15 @@
+.dropdown{
+    display: none;
+}
+@media only screen and (max-width: 1000px) {
+    .navbar{
+        display: none;
+    }
+    .dropdown{
+        display: flex;
+        background-color: #e2e8ec;
+        color: rgb(35, 130, 97);
+        display: flex;
+        justify-content: center;
+    }
+}

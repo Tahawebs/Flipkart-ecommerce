@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #e2e8ec;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.329);
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar ul li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size:x-large;
+    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    color: rgb(63, 63, 63);
+    transition: 0.4s;
+}
+.navbar ul li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: rgb(35, 130, 97);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+    transition: 0.5s;
+}
+.navbar ul li a:hover,
+.navbar ul li a.active{
+    color: rgb(35, 130, 97);
+}
+.navbar ul li a.active::after,
+.navbar ul li a:hover::after{
+    content: "";
+    width: 60%;
+    height: 2px;
+    background-color: rgb(35, 130, 97);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+.logo{
+    width: 150px;
+    transition: 0.5s;
+}
+.logo:hover{
+    content: url('imgs/hlogo.png');
+    scale: 1.05;
+}
+.first{
+    text-align: center;
+}
+.cardcontainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.card{
+    margin: 5vh;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.329);
+    transition: 0.5s;
+}
+.card:hover{
+    scale: 1.05;
+}
+
+.footer{
+    width: 100%;
+    height: 346.267px;
+    background-color:#232F3E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
+
+#li {
+        color: #fff;
+        list-style: none;
+        font-weight: 400;
+        font-size: 12px;
+    padding: 5px;
+    width: 155.8px;
+    height: 24px;
+    }
+    #li2 {
+        width: 155.8px;
+    height: 24px;
+        color: #fff;
+        list-style: none;
+        font-weight: 400;
+        font-size: 12px;
+        padding: 5px;
+    }
+    #li3 {
+        color: #fff;
+        list-style: none;
+        font-weight: 400;
+        font-size: 12px;
+        padding: 5px;
+        width: 155.8px;
+    height: 24px;
+    }
+    #li4 {
+        padding: 5px;
+        color: #fff;
+        list-style: none;
+        font-weight: 400;
+        font-size: 12px;
+        width: 155.8px;
+    height: 24px;
+    }
+    #p1{
+    
+    
+        color: #fff;
+        
+        line-height: 1.5;
+        font-size: 12px;
+        
+        letter-spacing: 0;
+        }
+        #p2{
+           
+            font-style: normal;
+            color: #fff;
+            font-size: 12px;
+         line-height: 1.5;
+            letter-spacing: 0;
+        }
+        .col1{
+           justify-content: left;
+            width:155.8px;
+            height: 193.8px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .col2{
+            
+            width:155.8px;
+            height: 193.8px;
+           
+        }
+        .col3{
+            width:155.8px;
+            height: 193.8px;
+        }
+        .col4{
+           
+            
+            width:155.8px;
+            height: 193.8px;
+        }
+        .col1 ul{
+            margin: 0 0 0 -2.5vw;
+        }
+        .col2 ul{
+            margin: 0 0 0 -2.5vw;
+        }
+        .col3 ul{
+            margin: 0 0 0 -2.5vw;
+        }
+        .col4 ul{
+            margin: 0 0 0 -2.5vw;
+        }
+        
+        
+        
+        
+        
+        
+        .col5{
+            width: 282.733px;
+            height: 193.8px;
+            border-left: 1px solid #454d5e;
+            padding-left: 20px;
+           
+        
+        }
+        .col6{
+            width:246.067px;
+            height: 193.8px;
+            
+        
+        }
+        
+        .ads{
+            width: 100vw;
+            height: 72.4667px;
+            background-color: #232F3E;
+            border-top:1px solid  #454d5e;
+            display: flex;
+            justify-content: space-evenly;
+           
+            padding: 25px 0;
+            align-items: center;
+        }
+        
+        #accounts{
+            width: 377px;
+            height: 18px;
+        
+        
+        
+        }
+footer{
+    display: flex;
+background-color:  #232F3E;
+color: #fff;
+    justify-content: center;
+    font-size: large;
+    text-align: center;
+    /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.647); */
+}
